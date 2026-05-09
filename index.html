@@ -9,91 +9,252 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%231f3a2e' d='M16 2 L24 16 L16 30 L8 16 Z'/%3E%3Cpath fill='%23c9a96e' d='M16 8 L20 16 L16 24 L12 16 Z'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="canvas" id="top">
-    <img class="mock" src="jewelzae-mock.jpg" alt="Jewelzae — kawasan kavling car-free di Cisauk, Tangerang" />
-
-    <!-- Section anchors aligned to image regions -->
-    <span class="anchor" id="beranda"  style="--y: 0%"></span>
-    <span class="anchor" id="tentang"  style="--y: 75%"></span>
-    <span class="anchor" id="fasilitas" style="--y: 38%"></span>
-    <span class="anchor" id="lokasi"   style="--y: 73%"></span>
-    <span class="anchor" id="harga"    style="--y: 30%"></span>
-    <span class="anchor" id="kontak"   style="--y: 90%"></span>
-
-    <!-- Click hotspots (left%, top%, width%, height%) -->
-    <a class="hot" href="#beranda"   aria-label="Beranda"  style="--x:2;  --y:1;    --w:19; --h:3"></a>
-    <a class="hot" href="#beranda"   aria-label="Beranda"  style="--x:39; --y:0.5;  --w:7;  --h:3.5"></a>
-    <a class="hot" href="#tentang"   aria-label="Tentang"  style="--x:47; --y:0.5;  --w:7;  --h:3.5"></a>
-    <a class="hot" href="#fasilitas" aria-label="Fasilitas" style="--x:55; --y:0.5; --w:8;  --h:3.5"></a>
-    <a class="hot" href="#lokasi"    aria-label="Lokasi"   style="--x:64; --y:0.5;  --w:7;  --h:3.5"></a>
-    <a class="hot" href="#harga"     aria-label="Harga"    style="--x:72; --y:0.5;  --w:7;  --h:3.5"></a>
-    <a class="hot" href="#kontak"    aria-label="Kontak"   style="--x:80; --y:0.5;  --w:11; --h:3.5"></a>
-
-    <!-- Hero CTAs -->
-    <a class="hot" data-action="survey"   aria-label="Jadwalkan Survey"
-       href="https://wa.me/6281234567890?text=Halo%20Jewelzae%2C%20saya%20mau%20jadwalkan%20survey%20kavling."
-       target="_blank" rel="noopener"
-       style="--x:5;  --y:24.8; --w:17; --h:3.4"></a>
-    <a class="hot" data-action="whatsapp" aria-label="Chat WhatsApp"
-       href="https://wa.me/6281234567890?text=Halo%20Jewelzae%2C%20saya%20tertarik%20dengan%20kavling%20Anda."
-       target="_blank" rel="noopener"
-       style="--x:23; --y:24.8; --w:14.5; --h:3.4"></a>
-
-    <!-- Visi Kawasan CTA -->
-    <a class="hot" data-action="survey"   aria-label="Pelajari Lebih Lanjut"
-       href="https://wa.me/6281234567890?text=Halo%20Jewelzae%2C%20saya%20mau%20info%20lengkap%20site%20plan%20kawasan."
-       target="_blank" rel="noopener"
-       style="--x:5;  --y:78.6; --w:17; --h:3"></a>
-
-    <!-- Final CTA banner -->
-    <a class="hot" data-action="survey"   aria-label="Jadwalkan Survey Sekarang"
-       href="https://wa.me/6281234567890?text=Halo%20Jewelzae%2C%20saya%20mau%20jadwalkan%20survey%20sekarang."
-       target="_blank" rel="noopener"
-       style="--x:64; --y:92;   --w:29; --h:3.5"></a>
-
-    <!-- Updated price overlay (covers the original 'Rp 200 Juta' card) -->
-    <div class="price-card" aria-label="Harga kavling">
-      <div class="leaf">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 2 L19 9 L12 16 L5 9 Z" fill="#e8efe5" stroke="#1f3a2e" stroke-width="1.2"/>
-          <path d="M12 9 L15 12 L12 15 L9 12 Z" fill="#1f3a2e" opacity=".55"/>
-        </svg>
-      </div>
-      <div class="text">
-        <div class="label">Kavling 100 m² mulai</div>
-        <div class="amount">Rp 500 Juta</div>
-        <div class="sub">atau <strong>Rp 5 juta&thinsp;/&thinsp;bulan</strong></div>
-      </div>
+  <header class="site-header" id="top">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Jewelzae">
+        <span class="brand-name">Jewelzae</span>
+        <img class="brand-mark" src="logo-flower.png" alt="" width="44" height="34" />
+      </a>
+      <nav class="primary-nav" aria-label="Utama">
+        <a href="#top" class="active">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#fasilitas">Fasilitas</a>
+        <a href="#lokasi">Lokasi</a>
+        <a href="#harga">Harga</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </header>
 
-    <!-- Floating WhatsApp pill (always visible, follows scroll) -->
-    <a class="wa-fab"
-       href="https://wa.me/6281234567890?text=Halo%20Jewelzae%2C%20saya%20tertarik%20dengan%20kavling%20Anda."
-       target="_blank" rel="noopener" aria-label="Chat WhatsApp">
-      <svg viewBox="0 0 24 24" width="22" height="22" fill="#fff" aria-hidden="true">
-        <path d="M20.52 3.48A11.94 11.94 0 0 0 12 0C5.37 0 0 5.37 0 12a11.94 11.94 0 0 0 1.64 6.06L0 24l6.13-1.61A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22a10 10 0 0 1-5.1-1.39l-.36-.21-3.64.95.97-3.55-.24-.37A10 10 0 1 1 22 12a10 10 0 0 1-10 10zm5.45-7.3c-.3-.15-1.77-.87-2.04-.97s-.47-.15-.67.15-.77.97-.94 1.16-.34.22-.64.07a8.16 8.16 0 0 1-2.4-1.48 9 9 0 0 1-1.66-2.07c-.17-.3 0-.46.13-.6s.3-.34.45-.52a2 2 0 0 0 .3-.5.55.55 0 0 0 0-.52c-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57a1.1 1.1 0 0 0-.8.37 3.34 3.34 0 0 0-1.04 2.49c0 1.46 1.07 2.88 1.22 3.08s2.1 3.2 5.08 4.49a17 17 0 0 0 1.7.63 4.1 4.1 0 0 0 1.86.12 3.05 3.05 0 0 0 2-1.41 2.49 2.49 0 0 0 .17-1.41c-.07-.13-.27-.2-.57-.35z"/>
-      </svg>
-      <span>WhatsApp</span>
-    </a>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1 class="display">
+            Kavling yang<br />
+            Dirancang untuk<br />
+            <em>Hidup Lebih Nyaman</em>
+          </h1>
+          <p class="lede">
+            Jewelzae menghadirkan kawasan car-free yang ramah keluarga di Cisauk — Tangerang, dengan water fountain untuk anak, electric becak dalam kompleks, dan suasana hijau yang membuat hidup terasa lebih tenang dan berkesan.
+          </p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="https://wa.me/6281234567890?text=Halo%20Jewelzae%2C%20saya%20mau%20jadwalkan%20survey%20kavling." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+              Jadwalkan Survey
+            </a>
+            <a class="btn btn-ghost" href="https://wa.me/6281234567890?text=Halo%20Jewelzae%2C%20saya%20tertarik%20dengan%20kavling%20Anda." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              Chat WhatsApp
+            </a>
+          </div>
+
+          <div class="price-card" id="harga">
+            <div class="price-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+                <path d="M16 4 L28 12 L16 20 L4 12 Z" fill="#dde6d3" stroke="#1f3a2e" stroke-width="1.2"/>
+                <path d="M16 12 L20 16 L16 20 L12 16 Z" fill="#1f3a2e" opacity=".55"/>
+              </svg>
+            </div>
+            <div class="price-body">
+              <div class="price-label">Kavling 100 m² mulai</div>
+              <div class="price-amount">Rp 500 Juta</div>
+              <div class="price-sub">atau <strong>Rp 5 juta / bulan</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <img src="hero-scene.jpg" alt="Kawasan Jewelzae: anak-anak bermain di water fountain, keluarga berjalan, electric becak melintas" />
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE CARDS -->
+    <section class="features container" id="fasilitas">
+      <div class="card-grid">
+        <article class="feature-card">
+          <div class="feature-img">
+            <img src="https://images.unsplash.com/photo-1510521212584-6d33ce4408d1?auto=format&fit=crop&w=900&q=80" alt="Pedestrian path" loading="lazy" />
+            <span class="feature-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="6" r="2"/><circle cx="15" cy="6" r="2"/><path d="M6 22v-4l-2-3 3-5h10l3 5-2 3v4"/></svg>
+            </span>
+          </div>
+          <h3 class="feature-title">Car-Free Living</h3>
+          <p class="feature-text">Area pedestrian yang aman, nyaman, dan lebih tenang untuk keluarga.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-img">
+            <img src="https://images.unsplash.com/photo-1716227964717-2cba93c9a4e5?auto=format&fit=crop&w=900&q=80" alt="Kids water fountain" loading="lazy" />
+            <span class="feature-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M9 6c0 2 6 2 6 0M5 22c2 0 2-3 0-3M19 22c-2 0-2-3 0-3M12 22c2 0 2-4 0-4"/></svg>
+            </span>
+          </div>
+          <h3 class="feature-title">Kids Water Fountain</h3>
+          <p class="feature-text">Ruang bermain air yang menyenangkan untuk anak-anak.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-img">
+            <img src="https://images.unsplash.com/photo-1758551932752-a9c603e25146?auto=format&fit=crop&w=900&q=80" alt="Electric becak in tropical resort" loading="lazy" />
+            <span class="feature-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h18M5 17V9h10l3 4h2v4M7 17a2 2 0 1 0 4 0M15 17a2 2 0 1 0 4 0"/></svg>
+            </span>
+          </div>
+          <h3 class="feature-title">Electric Becak</h3>
+          <p class="feature-text">Mobilitas internal yang unik, ramah lingkungan, dan memorable.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-img">
+            <img src="https://images.unsplash.com/photo-1524813686514-a57563d77965?auto=format&fit=crop&w=900&q=80" alt="Aerial view housing" loading="lazy" />
+            <span class="feature-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-7.58 7-13a7 7 0 1 0-14 0c0 5.42 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </span>
+          </div>
+          <h3 class="feature-title">Lokasi Berkembang</h3>
+          <p class="feature-text">Dekat Stasiun Jatake, Pintu Tol Legok, dan 2,1 km ke Hiera BSD.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats container" id="tentang">
+      <div class="stats-card">
+        <div class="stat">
+          <div class="stat-icon">
+            <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="#1f3a2e" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 27C9 22 7 16 11 11c2-3 7-2 5 4-1 4 2 7 5 4 3-2 5 1 3 5-2 3-5 4-8 3z"/></svg>
+          </div>
+          <div class="stat-label">Luas area</div>
+          <div class="stat-value">5.400 <span>m²</span></div>
+        </div>
+        <div class="stat">
+          <div class="stat-icon">
+            <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="#1f3a2e" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="9" width="8" height="18"/><rect x="16" y="5" width="10" height="22"/><path d="M8 13h4M8 17h4M8 21h4M19 9h4M19 13h4M19 17h4M19 21h4"/></svg>
+          </div>
+          <div class="stat-label">Fasilitas umum siap pakai</div>
+          <div class="stat-value">500 <span>m²</span></div>
+        </div>
+        <div class="stat">
+          <div class="stat-icon">
+            <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="#1f3a2e" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4l10 4v8c0 6-4 11-10 12-6-1-10-6-10-12V8z"/><path d="M11 16l4 4 7-7"/></svg>
+          </div>
+          <div class="stat-label">Sertifikat</div>
+          <div class="stat-value">SHM <span>&amp; IMB</span></div>
+        </div>
+        <div class="stat">
+          <div class="stat-icon">
+            <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="#1f3a2e" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="12" r="3"/><circle cx="22" cy="12" r="3"/><circle cx="16" cy="9" r="3"/><path d="M5 24c0-3 3-5 5-5s5 2 5 5M17 24c0-3 3-5 5-5s5 2 5 5"/></svg>
+          </div>
+          <div class="stat-label-fill">Lingkungan berkembang dengan banyak perumahan di sekitarnya</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISI KAWASAN -->
+    <section class="vision container" id="lokasi">
+      <div class="vision-grid">
+        <div class="vision-text">
+          <span class="eyebrow">
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#c9a96e"/></svg>
+          </span>
+          <h2 class="display">Visi Kawasan</h2>
+          <p>
+            Sebuah kompleks yang lebih manusiawi: hijau, ramah anak, mudah dijelajahi, dan memberi pengalaman tinggal yang lebih menarik dari kavling biasa.
+          </p>
+          <a class="btn btn-dark" href="https://wa.me/6281234567890?text=Halo%20Jewelzae%2C%20saya%20mau%20info%20lengkap%20site%20plan%20kawasan." target="_blank" rel="noopener">
+            Pelajari Lebih Lanjut
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="vision-map">
+          <img src="siteplan.jpg" alt="Site plan Jewelzae dengan 5 fasilitas: Plaza & Water Fountain, Playground Anak, Community Hall, Electric Becak Route, Kuliner & Retail" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner container" id="kontak">
+      <div class="cta-card">
+        <div class="cta-badge">
+          <img src="gate-icon.png" alt="" width="64" height="58" />
+        </div>
+        <div class="cta-text">
+          <h2 class="display">Hidup Lebih Tenang,<br />Bersama Alam dan Komunitas</h2>
+        </div>
+        <div class="cta-aside">
+          <p>Jewelzae bukan hanya kavling, tapi awal dari kehidupan yang lebih berkualitas untuk Anda dan keluarga.</p>
+          <a class="btn btn-cream" href="https://wa.me/6281234567890?text=Halo%20Jewelzae%2C%20saya%20mau%20jadwalkan%20survey%20sekarang." target="_blank" rel="noopener">
+            Jadwalkan Survey Sekarang
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <span class="brand-name">Jewelzae</span>
+          <img class="brand-mark" src="logo-flower.png" alt="" width="36" height="28" />
+        </a>
+        <p>Kavling car-free yang ramah keluarga di Cisauk — Tangerang.</p>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <ul>
+          <li>WhatsApp: <a href="https://wa.me/6281234567890">+62 812-3456-7890</a></li>
+          <li>Email: <a href="mailto:halo@jewelzae.com">halo@jewelzae.com</a></li>
+          <li>Cisauk, Tangerang</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#fasilitas">Fasilitas</a></li>
+          <li><a href="#lokasi">Lokasi</a></li>
+          <li><a href="#harga">Harga</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li>SHM &amp; IMB tersedia</li>
+          <li>© <span id="year">2026</span> Jewelzae</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
   <script>
-    // Smooth scroll: account for image being a single canvas
-    document.querySelectorAll('a.hot[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const id = a.getAttribute('href').slice(1);
-        const el = document.getElementById(id);
-        if (!el) return;
-        e.preventDefault();
-        const rect = el.getBoundingClientRect();
-        const top = window.scrollY + rect.top - 12;
-        window.scrollTo({ top, behavior: 'smooth' });
-      });
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.primary-nav');
+    toggle?.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
     });
+    nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle?.setAttribute('aria-expanded', 'false');
+    }));
+    const header = document.querySelector('.site-header');
+    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
   </script>
 </body>
 </html>
