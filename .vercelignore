@@ -1,0 +1,5 @@
+.git
+.source
+.DS_Store
+*.png
+node_modules
